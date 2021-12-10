@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guilherme Gomes Branco">
+    <meta name="description" content="Projeto do formulário feito com Js">
+    <meta name="keywords" content="Formulário, Projeto, JavaScript">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/50/000000/monitor--v2.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <title>Cadastre-se já!</title>
+</head>
+<body>
+  
+  <form action="#" class="form">
+    <h2 class="text-center">Cadastre-se já!</h2>
+    <!-- Barra de progresso -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      
+      <div
+        class="progress-step progress-step-active"
+        data-title="Nome"
+      ></div>
+      <div class="progress-step" data-title="Contato"></div>
+      <div class="progress-step" data-title="Identificação"></div>
+      <div class="progress-step" data-title="Senha"></div>
+    </div>
+
+    <!-- Steps -->
+    <div class="form-step form-step-active">
+      <div class="input-group">
+        <label for="username">Nome</label>
+        <input type="text" name="username" id="username" autocomplete="off" />
+      </div>
+      <div class="input-group">
+        <label for="position">Sobrenome</label>
+        <input type="text" name="position" id="position" autocomplete="off"/>
+      </div>
+      <div class="">
+        <a href="#" class="btn btn-next width-50 ml-auto">Avançar</a>
+      </div>
+    </div>
+    <div class="form-step">
+      <div class="input-group">
+        <label for="phone">Telefone</label>
+        <input type="text" name="phone" id="phone" />
+      </div>
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div class="btns-group">
+        <a href="#" class="btn btn-prev">Voltar</a>
+        <a href="#" class="btn btn-next">Avançar</a>
+      </div>
+    </div>
+    <div class="form-step">
+      <div class="input-group">
+        <label for="dob">Data de aniversário</label>
+        <input type="tel" name="dob" id="dob" maxlength="10" placeholder="dd/mm/aaaa"
+        oninput="this.value = DDMMYYYY(this.value, event)" />
+      </div>
+      <div class="input-group">
+        <label for="ID">Cpf</label>
+        <input type="number" name="ID" id="ID" />
+      </div>
+      <div class="btns-group">
+        <a href="#" class="btn btn-prev">Voltar</a>
+        <a href="#" class="btn btn-next">Avançar</a>
+      </div>
+    </div>
+    <div class="form-step">
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">Confirme sua senha</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+        />
+      </div>
+      <div class="btns-group">
+        <a href="#" class="btn btn-prev">Voltar</a>
+        <input type="submit" value="Enviar" class="btn" />
+      </div>
+    </div>
+  </form>
+</body>
+</html>

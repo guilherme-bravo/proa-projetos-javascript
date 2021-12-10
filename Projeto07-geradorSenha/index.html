@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de senha feito com Js">
+    <meta name="keywords" content="GeradorDeSenha, Segurança, JavaScript">
+    <meta name="author" content="Guilherme Gomes Branco Bravo">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de senha</title>
+</head>
+
+<body>
+    <div class="inputBox">
+        <h2>Gerador de senhas</h2>
+        <input type="text" name="" placeholder="Nova senha segura" id="password" readonly="">
+        <div id="btn" onclick="getPassword();">Gerar senha </div>
+    </div>
+
+    <script type="text/javascript">
+        function getPassword() {
+
+
+            var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%*(){}+:";
+            var passwordLength = 16;
+            var password = "";
+
+            for (let i = 0; i < passwordLength; i++) {
+                var randomNum = Math.floor(Math.random() * chars.length);
+                // substring pega um char entre o primeiro valor e o ultimo dos ();
+                password += chars.substring(randomNum, randomNum + 1);
+            }
+            document.getElementById("password").value = password
+        }
+    </script>
+</body>
+
+</html>
